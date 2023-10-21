@@ -45,6 +45,17 @@ class addemployee {
      //  this.elements.selectIcon().eq(0).click() 
        //.select('Single').should('have.value','Single');
     }
+
+adduser(id: number, username: string, password: string)
+{
+    
+}
+
+
+
+
+
+
 }
 
 export default addemployee;
