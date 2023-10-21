@@ -13,6 +13,9 @@ describe("verify Recruitment", () => {
   });
 
   it('Import file from  Candidate',() => {
+     cy.visit(
+          "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate"
+        );
     importfile.addCandidate();
 
   })
