@@ -10,9 +10,7 @@ export  default class addCandidate{
     }
     
     addCandidate() {
-        cy.visit(
-          "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate"
-        );
+        
         this.elements.firstName().type("aya");
         this.elements.lastName().type("abumtawea");
         this.elements.email().type("ayaabumtawea@gmail.com");
