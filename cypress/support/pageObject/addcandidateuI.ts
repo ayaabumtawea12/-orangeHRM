@@ -16,7 +16,7 @@ export  default class addCandidate{
         this.elements.firstName().type("aya");
         this.elements.lastName().type("abumtawea");
         this.elements.email().type("ayaabumtawea@gmail.com");
-        cy.get('input[type="file"]').selectFile("cypress/fixtures/filecandidate.xlsx", { force: true,});
+        cy.get('input[type="file"]').selectFile("cypress/fixtures/filecandidate.pdf", { force: true,});
         this.elements.saveBtn().click()    
       }
 }
