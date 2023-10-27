@@ -5,7 +5,7 @@ class addemployee {
 
         addEmp: ()=> cy.get('.oxd-button--secondary'),
 
-        employeeId: () => cy.get('.oxd-input--active'),
+        employeeId: () => cy.get(':nth-child(1) > .oxd-grid-2 > .oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input'),
 
         EmployeeInput:()=>cy.get('.--name-grouped-field'),
 
@@ -45,6 +45,17 @@ class addemployee {
      //  this.elements.selectIcon().eq(0).click() 
        //.select('Single').should('have.value','Single');
     }
+
+adduser(id: number, username: string, password: string)
+{
+    
+}
+
+
+
+
+
+
 }
 
 export default addemployee;

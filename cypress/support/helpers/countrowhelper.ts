@@ -1,16 +1,17 @@
-//const baseurl = Cypress.config().baseurl
 
-import userInit from "../init/inituser"
+import userInit from "../init/initrec"
 
 export const URLs={
 users: "https://conduit.productionready.io/api/users"
 };
- 
+
 
 export default class addUser{
     static addNewUserViaApi(){
-        cy.addnewuser(URLs.users,userInit.initUser())
+    //    cy.addnewuser("POST",URLs.users,userInit.initUser())
     }
 }
 
 
+
+ 
