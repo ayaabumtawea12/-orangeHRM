@@ -54,7 +54,7 @@ it('requests a leave day in the future And The admin approves the leave request'
         cy.wait(2000);
         
         cy.get('.oxd-main-menu').contains('Leave').click();
-  
+        cy.get(div.oxd-table-body > div:nth-child(1) > div > div:nth-child(7) > div).should('contain.text', 'Scheduled')
     })
     
 })
