@@ -4,17 +4,16 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 module.exports = defineConfig({
   e2e: {
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
-    //baseUrl: "https://opensource-demo.orangehrmlive.com/",
+    baseUrl: "https://opensource-demo.orangehrmlive.com",
     setupNodeEvents(on, config) {
       allureWriter(on, config);
+      require('@cypress/grep/src/plugin')(config);
       return config;
     },
     env: {
       allure: true,
       allureResultsPath: "allure-results",
       download_dir: './cypress/downloads',
-      snapshotOnly: true
-
       // allureReuseAfterSpec: true
     },
     reporter: 'mochawesome',

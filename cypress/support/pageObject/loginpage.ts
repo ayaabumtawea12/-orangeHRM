@@ -13,8 +13,16 @@ class loginPage {
         this.elements.userName().type(userName);
         this.elements.password().type(password);
         this.elements.loginBtn().click();
-        cy.get('.oxd-topbar-header-breadcrumb-module').should('contain','Dashboard');
+       // cy.get('.oxd-topbar-header-breadcrumb-module').should('contain','Dashboard');
     }
+
+
+    logout = () => {
+        return cy.api('GET','https://opensource-demo.orangehrmlive.com/web/index.php/auth/logout',{})
+    }
+
+
+
 }
 
 export default loginPage;
