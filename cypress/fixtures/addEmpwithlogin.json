@@ -23,9 +23,26 @@
         "duration": {
             "type": "full_day"
         }
-}
+},
+
+  "entries": 
+    [
+    {
+      "projectId": "2",
+      "activityId": "11",
+      "dates": { "2023-10-23": { "duration": "04:00" } }
+    }
+  ],
+  "deletedEntries": []
+  }
+        
 
 
-}
+
+
+
+
+
+
 
 
