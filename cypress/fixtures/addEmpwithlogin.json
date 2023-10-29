@@ -25,15 +25,21 @@
         }
 },
 
-  "entries": 
-    [
-    {
-      "projectId": "2",
-      "activityId": "11",
-      "dates": { "2023-10-23": { "duration": "04:00" } }
-    }
+"datatimesheets": {
+  "entries": [
+      {
+          "projectId": 5,
+          "activityId": 40,
+          "dates": {
+              "2023-10-28": {
+                  "duration": "04:00"
+              }
+          }
+      }
   ],
-  "deletedEntries": []
+  "deletedeEntries": []
+ }
+  
   }
         
 
