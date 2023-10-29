@@ -19,26 +19,27 @@ describe('add new Employee with login', () => {
 
     it('add new Employee with login via API', () => {
         cy.get('@addemp').then((data: any) => {
-            myAddEmployeePage.addEmployeeWithLogin(data).then((res: any) => {
+           myAddEmployeePage.addEmployeeWithLogin(data).then((res: any) => {
                // myLogin.logout();
                 cy.visit("https://opensource-demo.orangehrmlive.com/web/auth/login");
-                myLogin.login(data.username, data.password);
-               // cy.get('.oxd-main-menu').contains('Time').click();
+                //myLogin.login("admin", "admin123");
+               myLogin.login(data.username, data.password);
+               cy.get('.oxd-main-menu').contains('Time').click();
                cy.visit("https://opensource-demo.orangehrmlive.com/web/time/viewMyTimesheet")
                
                timesheet.getIDforTimeSheet().then((Id) => {
-                timesheet.editTimesheet(Id,data.entries);
+                timesheet.editTimesheet(Id,data);
                 timesheet.submitTimesheet(Id);
       });
 
-       myLogin.logout();
-      myLogin.login("admin", "admin123");
+     myLogin.logout();
+     myLogin.login("admin", "admin123");
      cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet");
-    assertion.assertionTimeSheet(" aya abumtawea");
-
+     assertion.assertionTimeSheet(data.username);
 
             });
         })
     })
  
+
 })
