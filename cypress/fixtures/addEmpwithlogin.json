@@ -23,9 +23,39 @@
         "duration": {
             "type": "full_day"
         }
-}
+},
+
+"timesheets": {
+  "entries": [
+      {
+          "projectId": 5,
+          "activityId": 40,
+          "dates": {
+              "2023-10-28": {
+                  "duration": "04:00"
+              }
+          }
+      }
+  ],
+  "deletedeEntries": []
+ }
 
 
-}
+
+
+
+
+
+  
+  }
+        
+
+
+
+
+
+
+
+
 
 
